@@ -72,7 +72,7 @@ source debugging support you should choose a checked build which will turn off
 optimizations and allow better source-level debugging.&nbsp; If you want to get 
 more performance, you can build a free build, which will execute code 
 considerably faster. For instructions, see the detailed build instructions in
-<a href="docs/buildtools/building_sscli.html">building_sscli.html</a>. </p>
+<a href="buildtools/building_sscli.html">building_sscli.html</a>. </p>
 <p>Colloquially, we refer to this project as Rotor, and this 2.0 release as Rotor Whidbey.&nbsp;Why? Well, you'll find 
 the following definitions for the word Rotor:
 </p>
@@ -124,12 +124,12 @@ using English locales.</p>
     <li>Tk installed if you want to run all the samples. &nbsp;&nbsp;</li>
 </ul>
 <p>For more information you might want to peruse the documentation
-<a href="docs/index.html">index</a> for more links into the documentation set.&nbsp; 
+<a href="index.html">index</a> for more links into the documentation set.&nbsp; 
 We recommend that you also have either Visual Studio 2005 or the .NET Frameworks 
 SDK as secondary documentation to the ECMA specifications.</p>
 <h2><a name="BuildingandRunningCode"></a>Building and Running Code</h2>
 <p>We've included a detailed document about
-<a href="docs/buildtools/building_sscli.html">building Rotor</a>, but if you are 
+<a href="buildtools/building_sscli.html">building Rotor</a>, but if you are 
 impatient, here are very brief instructions to get you up and running quickly.&nbsp;
 </p>
 <p><b><u>On Windows</u></b>: Once you have extracted the contents of the 
@@ -151,22 +151,22 @@ directory (samples/hello on UNIX systems based platforms), and then typing: </p>
 clix hello.exe
 </pre>
 <p>This will churn for a while (loading takes less time on the free build), and 
-then print out &quot;Hello World!&quot;&nbsp; The program <a href="docs/tools/clix.html">
+then print out &quot;Hello World!&quot;&nbsp; The program <a href="tools/clix.html">
 clix</a> is a program loader for managed executables. The first line uses the C# 
 compiler to produce hello.exe from hello.cs, a tiny program that prints &quot;Hello 
 World!&quot; to the system console.</p>
 <p></p>
 <p>Assuming that hello.exe works, you are now able to compile C# sources using
-<a href="docs/compilers/csharp.html">csc</a> (the C# compiler), and JScript 
-sources using the <a href="docs/compilers/jsc.html">jsc</a> compiler. Remember 
+<a href="compilers/csharp.html">csc</a> (the C# compiler), and JScript 
+sources using the <a href="compilers/jsc.html">jsc</a> compiler. Remember 
 to always run Rotor 2.0 programs in a shell that has been set up using the
-<a href="docs/buildtools/env.html">env</a> scripts as described above. Also 
+<a href="buildtools/env.html">env</a> scripts as described above. Also 
 remember that managed executables need to be launched using clix in order to run 
 under Rotor.&nbsp; For example, the JScript compiler must be run in this way.
 </p>
-<p>You are almost certain to find that the <a href="docs/map.html">map of the 
+<p>You are almost certain to find that the <a href="map.html">map of the 
 source code</a> to very useful in navigating around the distribution. The 
-document on <a href="docs/buildtools/building_sscli.html">building rotor</a> 
+document on <a href="buildtools/building_sscli.html">building rotor</a> 
 will also be very helpful if you are modifying code; its scenario-based 
 descriptions can be time-saving. </p>
 <h2><a name="TestingRotor"></a>Testing Rotor</h2>
@@ -188,7 +188,7 @@ implementation: </p>
   <li>The <a href="tests/bcl">Base Class Library</a> (BCL) Tests: Use these 
   tests when making modifications to the base class libraries.</li>
 </ul>
-<p>For more information refer to the <a href="docs/testing_overview.html">
+<p>For more information refer to the <a href="testing_overview.html">
 testing_overview.html</a> document in the sscli/docs directory.</p>
 <p></p>
 <h2><a name="security"></a>A Note About Security</h2>
@@ -196,7 +196,7 @@ testing_overview.html</a> document in the sscli/docs directory.</p>
 environment, although its source code does provide a very good example of how a 
 secure execution environment might be built. By default, strongname verification 
 is turned off for several important public keys - see the
-<a href="docs/relnotes.html">release notes</a> for details as to how strongnames 
+<a href="relnotes.html">release notes</a> for details as to how strongnames 
 work in this distribution. </p>
 <p>The implementation of Rotor's global assembly cache and strongname 
 verification system is completely separate from the implementation used by the 
