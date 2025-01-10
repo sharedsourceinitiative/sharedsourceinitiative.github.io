@@ -1,514 +1,225 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html> 
+<html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="rotor.css">
-<title>Documentation Index</title>
+<title>Microsoft Shared Source CLI</title>
+<link rel="stylesheet" type="text/css" href="docs/rotor.css">
 </head>
-<body>		
 
-<h1>Documentation Index</h1>
+<body>
 
- 
-<p>The following documents are included in the  Shared Source CLI (SSCLI) 2.0 and
-    C# 2.0
-distribution.</p>
+<h2 class="top">Welcome!</h2>
+<h3>Contents</h3>
+<ul>
+  <li><a href="#WhatsNew">What's New in the Microsoft Shared Source CLI 2.0 Release?</a></li>
+  <li><a href="#Intro">What is the Microsoft Shared Source CLI?</a></li>
+  <li><a href="#GettingStarted">Getting Started</a></li>
+  <li><a href="#BuildingandRunningCode">Building and Running Code</a></li>
+  <li><a href="#TestingRotor">Testing Rotor</a></li>
+  <li><a href="#security">A Note About Security</a></li>
+  <li><a href="#licenses">Yet More on Licensing</a></li>
+  <li><a href="#DocumentationStyle">A Comment on Documentation Style</a></li>
+</ul>
+<h2><a name="WhatsNew"></a>What's New in  the 
+Microsoft Shared Source CLI 2.0 Release?</h2>
+  <p>
+      Some interesting new features in the SSCLI 2.0 release include:</p>
+<ul>
+    <li>Generics</li>
+    <li>Lightweight Code Generation (LCG)</li>
+    <li>Open static and closed instance Delegates</li>
+    <li>Relaxed Delegates</li>
+    <li>Loader and System.Reflection re-writes</li>
+    <li>Metadata format updates</li>
+    <li>New C# features like Anonymous Methods, Anonymous Delegates and Generics support</li>
+    <li>Numerous BCL additions</li>
+    <li>Stub based dispatch support (in supported callsites)</li>
+    <li>Numerous bug fixes</li></ul>
+<h2><a name="Intro"></a>What is the Microsoft Shared Source CLI (SSCLI)?</h2>
 
- 
-<p>At the root of the distribution is the <a href="readfirst.html">
-readfirst.html</a> document.&nbsp; This contains important and late-breaking 
-information on the SSCLI 2.0 distribution. Also how to build <a href= "building/windows2003.html">.NET Server</a> Here are <a href="default.htm">Windows XP UX Guidelines</a></p>
-
-<p><a href="refdocs/ClassLibrary.html">SSCLI Class Library Documentation</a></p>
-
- 
-<h2>docs Directory</h2>
-
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><b>index.html</b></td>
-      <td width="69%">This document.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="map.html">map.html</a></td>
-      <td width="69%">Roadmap to the SSCLI architecture.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="glossary.html">glossary.html</a></td>
-      <td width="69%">Glossary of terms used in the SSCLI documentation and 
-      source code.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="relnotes.html">relnotes.html</a></td>
-      <td width="69%">Release notes with additional information on this release 
-      of SSCLI.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="testing_overview.html">testing_overview.html</a></td>
-      <td width="69%">Overview of the testing infrastructure in SSCLI</td>
-    </tr>
-  </table>
-
-
-  <blockquote>
-
-
-  <h3>buildtools Directory</h3>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><b><a href="buildtools/buildtools_index.html">buildtools_index.html</a></b></td>
-      <td width="69%">Index for documents in the buildtools directory.&nbsp; Go 
-      here for a more detailed description of each file.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="buildtools/binplace.html">binplace.html</a></td>
-      <td width="69%">Build output manager.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="buildtools/buildall.html">buildall.html</a></td>
-      <td width="69%">Buildall build script.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="buildtools/building_sscli.html">building_sscli.html</a></td>
-      <td width="69%">How to build the SSCLI source tree.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="buildtools/buildutility.html">buildutility.html</a></td>
-      <td width="69%">The SSCLI build utility.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="buildtools/env.html">env.html</a></td>
-      <td width="69%">Setting up the SSCLI build environment.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="buildtools/internalresgen.html">
-      internalresgen.html</a></td>
-      <td width="69%">A bootstrap resource compiler.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="buildtools/nmake.html">nmake.html</a></td>
-      <td width="69%">Make tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="buildtools/resourcecompiler.html">
-      resourcecompiler.html</a></td>
-      <td width="69%">Platform-independent resource compiler used for SSCLI. </td>
-    </tr>
-  </table>
-
-
-<h3>compilers Directory</h3>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><b><a href="compilers/compilers_index.html">compilers_index.html</a></b></td>
-      <td width="69%">Index for documents in the compilers directory.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="compilers/csharp.html">csharp.html</a></td>
-      <td width="69%">Options and changes for the SSCLI implementation of the C# 
-      compiler.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="compilers/jsc.html">jsc.html</a></td>
-      <td width="69%">Options and changes for SSCLI implementation of 
-      the JScript compiler.</td>
-    </tr>
-  </table>
-
-
-<h3>debugging Directory</h3>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><b><a href="debugging/debugging_index.html">
-      debugging_index.html</a></b></td>
-      <td width="69%">Index for documents in the debugging directory.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="debugging/debugging_overview.html">
-      debugging_overview.html</a></td>
-      <td width="69%">Overview of debugging in the SSCLI.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="debugging/sos.html">sos.html</a></td>
-      <td width="69%">Describes the functionality of the SOS debugger extension.</td>
-    </tr>
-  </table>
-
-
-<h3>ecma Directory</h3>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><b><a href="ecma/ecma_index.html">ecma_index.html</a></b></td>
-      <td width="69%">Contains information about the ECMA-334 and ECMA-335 
-      documentation.</td>
-    </tr>
-  </table>
-
-<h3>techinfo Directory</h3>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><b><a href="techinfo/techinfo_index.html">
-      techinfo_index.html</a></b></td>
-      <td width="69%">Index to the techinfo documentation directory.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="techinfo/encodings.html">encodings.html</a></td>
-      <td width="69%">Encodings used in the SSCLI.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="techinfo/logging.html">logging.html</a></td>
-      <td width="69%">How to activate logging in the SSCLI.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="techinfo/native_managed_interop.html">
-      native_managed_interop.html</a></td>
-      <td width="69%">Native to managed interoperability in the SSCLI 
-      implementation.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="techinfo/pal_guide.html">pal_guide.html</a></td>
-      <td width="69%">Platform Adaptation Layer (PAL) specification.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="techinfo/resfilefmt.html">resfilefmt.html</a></td>
-      <td width="69%">Managed CLI resource file format.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="techinfo/stackframe.html">stackframe.html</a></td>
-      <td width="69%">Stack frame format used in the SSCLI.</td>
-    </tr>
-  </table>
-
-<h3>tools Directory</h3>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><b><a href="tools/tools_index.html">tools_index.html</a></b></td>
-      <td width="69%">Index for documents in the tools directory.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/al.html">al.html</a></td>
-      <td width="69%">Assembly Linker tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/caspol.html">caspol.html</a></td>
-      <td width="69%">Code Access Security Policy tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/clix.html">clix.html</a></td>
-      <td width="69%">Rotor managed application launcher tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/cordbg.html">cordbg.html</a></td>
-      <td width="69%">Runtime managed code debugger.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/gacutil.html">gacutil.html</a></td>
-      <td width="69%">Global Assembly Cache management tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/genpalunitable.html">genpalunitable.html</a></td>
-      <td width="69%">Unicode table-building tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/ilasm.html">ilasm.html</a></td>
-      <td width="69%">CIL Assembler.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/ildasm.html">ildasm.html</a></td>
-      <td width="69%">CIL Disassembler.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/ildbconv.html">ildbconv.html</a></td>
-      <td width="69%">Symbolic debug information converting tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/ildbdump.html">ildbdump.html</a></td>
-      <td width="69%">Allows dumping of symbolic debug information stored in 
-      .ildb files.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/metainfo.html">metainfo.html</a></td>
-      <td width="69%">Metadata dump tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/permview.html">permview.html</a></td>
-      <td width="69%">Permissions View tool</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/peverify.html">peverify.html</a></td>
-      <td width="69%">Type safety verification PEVerify tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/resgen.html">resgen.html</a></td>
-      <td width="69%">Resource File Generator.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/sn.html">sn.html</a></td>
-      <td width="69%">Strong Name  tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="tools/storeadm.html">storeadm.html</a></td>
-      <td width="69%">Isolated Storage  tool.</td>
-    </tr>
-    </table>
-
-</blockquote>
-
-<h2>samples Directory</h2>
-
-<blockquote>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><b><a href="../samples/samples_index.html">
-      samples_index.html</a></b></td>
-      <td width="69%">Index for documents in the samples directory.</td>
-    </tr>
-    </table>
-
-<h3>compilers Directory</h3>
-
-  <blockquote>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><a href="../samples/compilers/clisp/clisp.html">
-      \clisp\clisp.html</a></td>
-      <td width="69%">Lisp compiler sample.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/compilers/myc/myc.html">\myc\myc.html</a></td>
-      <td width="69%">Simple C compiler sample.</td>
-    </tr>
-    </table>
-
-  </blockquote>
-
-<h3>hello and helloxml Directories</h3>
-
-  <blockquote>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><a href="../samples/hello/hello.html">\hello\hello.html</a></td>
-      <td width="69%">Simple hello world sample.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/helloxml/helloxml.html">
-      \helloxml\helloxml.html</a></td>
-      <td width="69%">Simple hello world sample that writes XML.</td>
-    </tr>
-    </table>
-
-  </blockquote>
-
-<h3>howto Directory</h3>
-
-  <blockquote>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/basedatatypes/stringformat/stringformat.html">
-      \basedatatypes\stringformat\stringformat.html</a></td>
-      <td width="69%">String formatting sample.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/howto/codedom/listbuilder.html">
-      \codedom\listbuilder.html</a></td>
-      <td width="69%">Codedom code generation sample.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/net/getresponse/getresponse.html">
-      \net\getresponse\getresponse.html</a></td>
-      <td width="69%"><b>System.Net </b>sample using the <b>WebRequest</b> 
-      class.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/howto/net/udpchat/udpchat.html">
-      \net\udpchat\udpchat.html</a></td>
-      <td width="69%"><b>UdpClient</b> net sample.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/reflection/emit/reflectionemit.html">
-      \reflection\emit\reflectionemit.html</a></td>
-      <td width="69%">Reflection sample using emit to generate an assembly.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/reflection/invoke/reflectioninvoke.html">
-      \reflection\invoke\reflectioninvoke.html</a></td>
-      <td width="69%">Reflection sample showing invoke functionality.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/regularexpressions/regularexpressions.html">
-      \regularexpressions\regularexpressions.html</a></td>
-      <td width="69%">Regular expression (<b>RegEx</b> class) sample.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/howto/remoting/remoting.html">
-      \remoting\remoting.html</a></td>
-      <td width="69%">Remoting sample with client and server.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/resources/managedresources.html">
-      \resources\managedresources.html</a></td>
-      <td width="69%">Managed resource sample.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/security/permissions/permissions.html">
-      \security\permissions\permissions.html</a></td>
-      <td width="69%">Code access security sample.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/serialization/iserializable/iserializable.html">
-      \serialization\iserializable\iserializable.html</a></td>
-      <td width="69%">Serialization sample showing the <b>ISerializable</b> 
-      interface.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/serialization/simpleserialize/simpleserialize.html">
-      \serialization\simpleserialize\simpleserialize.html</a></td>
-      <td width="69%">Simple serialization sample.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/howto/xml/xmlschema/xmlschema.html">
-      \xml\xmlschema\xmlschema.html</a></td>
-      <td width="69%">XML schema object model sample.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/xml/xmltransform/xmltransform.html">
-      \xml\xmltransform\xmltransform.html</a></td>
-      <td width="69%">XML transformation sample.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/howto/xmlserialization/xmlserialization.html">
-      \xmlserialization\xmlserialization.html</a></td>
-      <td width="69%">XML serialization sample.</td>
-    </tr>
-    </table>
-
-  </blockquote>
-
-<h3>pigui Directory</h3>
-
-  <blockquote>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><a href="../samples/pigui/hello/hello.html">
-      \hello\hello.html</a></td>
-      <td width="69%">Simple hello world sample using Tk.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/pigui/pigpad/pigpad.html">
-      \pigpad\pigpad.html</a></td>
-      <td width="69%">More advanced Tk sample.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/pigui/tk/tk_wrapper.html">
-      \tk\tk_wrapper.html</a></td>
-      <td width="69%">Simple Tk wrapper classes.</td>
-    </tr>
-    </table>
-
-  </blockquote>
-
-<h3>utilities Directory</h3>
-
-  <blockquote>
-
- 
-  <table width="90%" border="1">
-    <tr>
-      <td width="31%"><a href="../samples/utilities/cleanbuild/cleanbuild.html">
-      \cleanbuild\cleanbuild.html</a></td>
-      <td width="69%">SSCLI build cleanup utility.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/utilities/codetohtml/codetohtml.html">
-      \codetohtml\codetohtml.html</a></td>
-      <td width="69%">JScript tool to format code to HTML.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/utilities/corclass/corclass.html">
-      \corclass\corclass.html</a></td>
-      <td width="69%">Assembly and class searching utility.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/utilities/crlf/crlf.html">
-      \crlf\crlf.html</a></td>
-      <td width="69%">Line termination analysis utility.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/utilities/dnprofiler/dnprofiler.html">
-      \dnprofiler\dnprofiler.html</a></td>
-      <td width="69%">Profiler example.</td>
-    </tr>
-    <tr>
-      <td width="31%">
-      <a href="../samples/utilities/getcliversion/getcliversion.html">
-      \getcliversion\getcliversion.html</a></td>
-      <td width="69%">Runtime version value utility.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/utilities/grep/grep.html">
-      \grep\grep.html</a></td>
-      <td width="69%">Grep utility.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/utilities/keyconfig/keyconfig.html">
-      \keyconfig\keyconfig.html</a></td>
-      <td width="69%">SSCLI assembly key configuration tool.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/utilities/typefinder/typefinder.html">
-      \typefinder\typefinder.html</a></td>
-      <td width="69%">Type searching utility.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/utilities/wordcount/wordcount.html">
-      \wordcount\wordcount.html</a></td>
-      <td width="69%">Wordcount sample utility.</td>
-    </tr>
-    <tr>
-      <td width="31%"><a href="../samples/utilities/xsd/xsd.html">\xsd\xsd.html</a></td>
-      <td width="69%">XSD schema conversion tool.</td>
-    </tr>
-    </table>
-
-  </blockquote>
-</blockquote>
-
-<br>
-
+<p>The Microsoft&reg; Shared Source CLI 2.0 is a working implementation of the
+<a href="http://msdn.microsoft.com/net/ecma">ECMA-334 and ECMA-335 standards</a> 
+(known to us mortals as the Common Language Infrastructure and the C# 
+programming language). The source code in this distribution builds Microsoft® Windows only,
+    support for further platforms is planned. Besides the CLI and the C# compiler, this 
+distribution contains a JScript compiler written entirely in C#, as well as a 
+wide variety of tools, utilities, managed classes, and samples. It is intended 
+to be an appealing new platform alternative for people who want to learn, to 
+teach, to tinker, or to experiment more formally with computer languages and 
+computer language infrastructure.</p>
+<p>This is the forth release of the Shared Source CLI, and the first release for the
+    2.0 implementation of the runtime and framework. You can find older versions of
+    the SSCLI at <a href="http://msdn.microsoft.com/net/sscli/">http://msdn.microsoft.com/net/sscli/</a>. It is for 
+non-commercial, experimental use only.&nbsp; The distribution is completely unsupported, although the 
+development team will be checking in on the <code>
+microsoft.public.shared_source.cli</code> newsgroup.</p>
+    <p>
+        The Shared Source CLI 2.0 is being distributed as source code under 
+a Shared Source license. It is important for you to read through the brief
+<a href="license.txt">license</a> that is included with your copy of this 
+distribution now, because once you examine the code or use it in any way, you 
+will be bound by the terms of this license.&nbsp; For more information about the 
+Shared Source program at Microsoft, take a look at the Microsoft Shared Source 
+Initiative Web page at 
+    <a href="http://www.microsoft.com/resources/sharedsource/default.mspx">http://www.microsoft.com/resources/sharedsource/default.mspx</a><a href="http://www.microsoft.com/sharedsource"></a> or search
+<a href="http://www.microsoft.com/">www.microsoft.com</a> for &quot;Shared Source&quot;.
+    </p>
+<p>By default, the build scripts in this distribution produce an optimized debug 
+build of the tools and runtime. This is because we believe that most of you are 
+programmers, and that you will want to be spelunking around in the debugger but 
+you still want reasonable execution performance.&nbsp; If you want maximum 
+source debugging support you should choose a checked build which will turn off 
+optimizations and allow better source-level debugging.&nbsp; If you want to get 
+more performance, you can build a free build, which will execute code 
+considerably faster. For instructions, see the detailed build instructions in
+<a href="docs/buildtools/building_sscli.html">building_sscli.html</a>. </p>
+<p>Colloquially, we refer to this project as Rotor, and this 2.0 release as Rotor Whidbey.&nbsp;Why? Well, you'll find 
+the following definitions for the word Rotor:
+</p>
+<ul>
+  <li>An altocumulus cloud found in the lee of large mountain barriers, that 
+  circulates around its horizontal axis.</li>
+  <li>An important part of a cryptographic encoding or decoding device.</li>
+  <li>A quantity having magnitude, direction, and position.</li>
+  <li>The rotating part of a dynamo, turbine, distributor, compressor, 
+  centrifuge, blower, or motor.</li>
+  <li>A device that propels a ship forward in a cross-wind, exploiting the 
+  Magnus effect.</li>
+  <li>The rotating airfoil assembly on rotary-wing aircraft.</li>
+</ul>
+<p>It's obvious! Rotor is all of these <i>and more</i>... </p>
+<p></p>
+<h2><a name="GettingStarted"></a>Getting Started</h2>
+<p>Please read the <a href="license.txt">license</a> before you begin.</p>
+<p>OK, having taken care of that, Rotor has been built and tested on
+<a href="http://www.microsoft.com/windowsxp">Windows XP only</a>. If you want to build and run 
+the source code, you'll need some additional software.&nbsp; 
+The Rotor build process uses Perl in several ways, both to run the test harness 
+and as a way to autogenerate some utility code. You will need 
+Microsoft Visual Studio&reg; 2005
+    as well as Perl. (The Rotor development team 
+currently uses ActivePerl 5.8.7.813,
+    from <a href="http://www.activestate.com">
+ActiveState</a>, but <a href="http://www.perl.org">perl.org</a> is always a good 
+bet as well.)</p>
+<p>As far as hardware goes, we really recommend having 512M of memory in your 
+computer. While we've heard of success in building on machines with less, it can 
+be mighty slow (and the swap thrashing can be horrific). As far as disk space goes, 100 megabytes should be sufficient if all you 
+will be doing is viewing the source, but if you are doing active development 
+(especially running the test suites) you will need at least a gigabyte of free 
+disk space.</p>
+<p>Please note that the Rotor distribution was only tested on operating systems 
+using English locales.</p>
+<h4>Summary of System Requirements</h4>
+<p>Windows</p>
+<ul>
+  <li>We've tested the distribution on Windows XP and Windows 2000. We recommend 
+  Windows XP.</li>
+  <li>Microsoft Visual Studio 2005 Standard edition or above installed.&nbsp; You must, at a minimum, install the 
+  Microsoft Visual C++ 2005 product.</li>
+  <li>Perl installed and in the path.</li>
+  <li>256 MB of memory (suggested minimum).</li>
+  <li>100 MB of free disk space to expand the archive.</li>
+  <li>One gigabyte of free disk space to build the distribution.</li>
+    <li>Tk installed if you want to run all the samples. &nbsp;&nbsp;</li>
+</ul>
+<p>For more information you might want to peruse the documentation
+<a href="docs/index.html">index</a> for more links into the documentation set.&nbsp; 
+We recommend that you also have either Visual Studio 2005 or the .NET Frameworks 
+SDK as secondary documentation to the ECMA specifications.</p>
+<h2><a name="BuildingandRunningCode"></a>Building and Running Code</h2>
+<p>We've included a detailed document about
+<a href="docs/buildtools/building_sscli.html">building Rotor</a>, but if you are 
+impatient, here are very brief instructions to get you up and running quickly.&nbsp;
+</p>
+<p><b><u>On Windows</u></b>: Once you have extracted the contents of the 
+tarball using your favorite archiving utility, open a command window and run the
+<code>env.bat</code> script from the sscli20 (root) directory of the distribution. 
+You need to run the script from this directory because it uses the current 
+directory to set up subsequent environment variables.&nbsp; After this, in the 
+same window, type <code>buildall</code>, which will initiate the build process. 
+In order to be useful on multiple platforms and systems, text files in the archive are 
+linefeed terminated.&nbsp; If you are running Windows, you'll want to view these 
+files in an editor that handles this case automatically (many do, including 
+WordPad and the Visual Studio editor), or else use a utility program to remove 
+the convert the linefeeds to Windows-style carriage-return/linefeed termination.
+</p>
+<p>Once the build has successfully finished, you should be able to compile and 
+execute the simple &quot;hello world&quot; test program by changing to the samples\hello 
+directory (samples/hello on UNIX systems based platforms), and then typing: </p>
+<pre>csc hello.cs
+clix hello.exe
+</pre>
+<p>This will churn for a while (loading takes less time on the free build), and 
+then print out &quot;Hello World!&quot;&nbsp; The program <a href="docs/tools/clix.html">
+clix</a> is a program loader for managed executables. The first line uses the C# 
+compiler to produce hello.exe from hello.cs, a tiny program that prints &quot;Hello 
+World!&quot; to the system console.</p>
+<p></p>
+<p>Assuming that hello.exe works, you are now able to compile C# sources using
+<a href="docs/compilers/csharp.html">csc</a> (the C# compiler), and JScript 
+sources using the <a href="docs/compilers/jsc.html">jsc</a> compiler. Remember 
+to always run Rotor 2.0 programs in a shell that has been set up using the
+<a href="docs/buildtools/env.html">env</a> scripts as described above. Also 
+remember that managed executables need to be launched using clix in order to run 
+under Rotor.&nbsp; For example, the JScript compiler must be run in this way.
+</p>
+<p>You are almost certain to find that the <a href="docs/map.html">map of the 
+source code</a> to very useful in navigating around the distribution. The 
+document on <a href="docs/buildtools/building_sscli.html">building rotor</a> 
+will also be very helpful if you are modifying code; its scenario-based 
+descriptions can be time-saving. </p>
+<h2><a name="TestingRotor"></a>Testing Rotor</h2>
+<p>Rotor comes with a number of test suites covering various aspects of its 
+implementation: </p>
+<p></p>
+<ul>
+  <li> The <a href="tests/palsuite">PAL Test Suite</a>: This test suite and its 
+  test driver was developed to be a quality suite for the Platform Adaptation 
+  Layer on UNIX systems based platforms. It can be used to smoke out bugs in your PAL modifications, 
+  and will run against either the Windows PAL or the FreeBSD PAL.</li>
+  <li>The <a href="tests/bvt">Base Verification Tests</a> (BVT) and the
+  <a href="tests/il_bvt">IL BVTs</a>: These tests and their driver (rrun.pl) are 
+  used to confirm basic CLI functionality. They are used as check-in test suites 
+  by the development team.&nbsp; Use them whenever you want to test a change.</li>
+  <li>The <a href="tests/security/verifier">Verifier Tests</a>: This collections 
+  of tests is used to check JIT verification. Use them if you are modifying the 
+  JIT process or IL.</li>
+  <li>The <a href="tests/bcl">Base Class Library</a> (BCL) Tests: Use these 
+  tests when making modifications to the base class libraries.</li>
+</ul>
+<p>For more information refer to the <a href="docs/testing_overview.html">
+testing_overview.html</a> document in the sscli/docs directory.</p>
+<p></p>
+<h2><a name="security"></a>A Note About Security</h2>
+<p>The Shared Source CLI runtime is not intended for use as a secure 
+environment, although its source code does provide a very good example of how a 
+secure execution environment might be built. By default, strongname verification 
+is turned off for several important public keys - see the
+<a href="docs/relnotes.html">release notes</a> for details as to how strongnames 
+work in this distribution. </p>
+<p>The implementation of Rotor's global assembly cache and strongname 
+verification system is completely separate from the implementation used by the 
+commercial Microsoft .NET Framework, and because of this, there should be no 
+interaction between the two. Turning off verification in Rotor will not impact 
+the Microsoft .NET Framework on Windows in any way. </p>
+<h2><a name="licenses"></a>Yet More on Licensing</h2>
+<p>There are a small number of files in this distribution that carry their own 
+licenses which are compatible with the Microsoft Shared Source CLI, C#, and 
+JScript License. Anyone building modified versions of this code should be aware 
+of and comply with these license terms. </p>
+    
+        <h2><a name="DocumentationStyle"></a>A Comment on Documentation Style</h2>
+    
+    <p>
+        To prevent repetativeness (and less typing on the authors behalf), we have used
+        the word SSCLI to mean SSCLI 2.0 throughout the documentation. SSCLI v1 will
+        be used to make explicit reference to the original release of Rotor, the SSCLI Version
+        1.0.</p>
+<h2>HAVE FUN!</h2>
 <hr>
-
 <p><i>Copyright (c) 2006 Microsoft Corporation. All rights reserved.</i></p>
-</body> 
+
+</body>
+
 </html>
