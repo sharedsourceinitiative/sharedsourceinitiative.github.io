@@ -10,7 +10,7 @@ pre, code
   font-family: Courier, monospace;
   font-size: 12px;
 }
-
+p { word-break: break-all }
 /*/*/a{}
 body,
 body td,
