@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Articles</title>
+		<title>Azure</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../rotor.css" />
@@ -38,67 +38,7 @@
 <p><a href="../pdf/Microsoft/HVC_Deployment_Guides_Module_1-Architecture.pdf">Deployment Guides Module 1-Architecture</a></p>
 <p><a href="../pdf/Microsoft/HVC_Deployment_Guides_Module_2-Deployment.pdf">Deployment Guides Module 2-Deployment</a></p>
 <p><a href="../pdf/Microsoft/HVC_Deployment_Guides_Module_3-Operations.pdf">Deployment Guides Module 3-Operations</a></p>
-<pre>
-choco install webpicmd
-</pre>
-<pre>
-WebPICMD.exe /Offline /Products:PHP56 /Path:C:\webpioff
-</pre>
 
-<p><a href="https://webpifeed.blob.core.windows.net/webpifeed/WebProductList.xml">The “Web Platform Installer 5.0 Feed</a>
-<pre>
-[[powershell]]
-cls
-
-# Open Web Platform Installer Feed
-
-$xml = [XML](Get-Content "C:\temp\Web Platform Installer\1343597488.xml")
-
-
-# Attach a namespace definition
-
-$ns = new-object Xml.XmlNamespaceManager $xml.NameTable
-
-$ns.AddNamespace("wpi", "http://www.w3.org/2005/Atom")
-
-
-#Select each of the installer nodes
-
-$tmp = $xml.SelectNodes("//wpi:installer", $ns)
-
-
-# For each 'installer'
-
-for ($i = 0; $i -lt $tmp.Count; $i++) {
-
-       $object = New-Object -TypeName PSObject –Prop `
-
-               (@{'Product'      =$tmp.Item($i).ParentNode.ParentNode.productID;
-
-                  'Title'        =$tmp.Item($i).ParentNode.ParentNode.metadata.title.innertext;
-
-                  'Folder'       ="installers\$($tmp.Item($i).ParentNode.ParentNode.productID)\$($tmp.Item($i).installerFile.sha1)";
-
-                  'Id'           = $tmp.Item($i).Id;
-
-                  'Language'     = $tmp.Item($i).languageId;
-
-                  'Architectures'=$tmp.Item($i).architectures.LastChild.Name;
-
-                  'Source'       =$tmp.Item($i).installerFile.installerURL})
-
-     #Only show downloadable modules
-
-     if (!([string]::IsNullOrEmpty($tmp.Item($i).installerFile.sha1))){
-
-        $object
-
-      }
-
-    }
-
-[[/powershell]]
-</pre>
 
 
 
