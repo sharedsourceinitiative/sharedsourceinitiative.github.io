@@ -34,10 +34,12 @@
 					<h2>Building the Windows 2003 IDW or Internal SDK, Build Tools, Debugging tools and Symbol CD
 
 </h2>
-				
-				<p>CD or change directory to the %NTROOT%\sdktools. Notice the project.mk file.</p>
-				<pre>set OFFICAL_BUILD_MACHINE=PRIMARY</pre>
-				<pre>build -cz</pre>				
+				<p>To build the IDW or internal SDK follow these steps</p>
+				<p>CD or change directory to the %NTROOT%\sdktools. Notice the project.mk file.</p>				
+				<pre>build -cz</pre>
+
+				<p>To build your Symbol CD do whats below</p>
+				<pre>set OFFICAL_BUILD_MACHINE=PRIMARY</pre>				
 				<pre>tools\postbuildscripts\symbolcd.cmd</pre>
 				<p>Your Symbol CD Folder is in the build directory at the root</p>
 				
