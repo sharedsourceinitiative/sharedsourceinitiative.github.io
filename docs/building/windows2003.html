@@ -75,12 +75,13 @@
 <p>depot,fxdev,retail,vsbuilt,symbols,vs,debug,xpclient,sdkdrop</p>
 <h2>Setting up VSBUILT</h2>
 
+<p>Use my 2000 Lab03_n as a buffer lab as a XP/2003 guide</p>
+
 <p>In the root of %NTROOT% make a 'vsbuilt' directory and copy every VC or Visual C/C++ Tools directory to 'VSBuilt' with the coresponding 'PlatformSDK' in the same ex. 'Vc7' directory for each version of Visual C/C++ 4.0-2008
 You may search the revision for a directory called 'crts' and use windiff or sdkdiff and put together a nice C Runtime from the revision. Compare it to the 2003 VC++ RTM In the 'crts' directory you can study algorithms like heap sort and standard input and output. The revision is just a build, the 2003 VC++ CRT RTM is more recent and the 2002 VC++ RTM is too old. All of the files are in the build you just have to put together a SDK, DDK, Ifskit, and VC drop.
 The 'lib' files are in the 'NT' public sdk and ddk directories.</p>
 
 <p>Make a 'ntbld' virual directory for the NT directory, in Internet Information Services or IIS with is a 80's freeware project for virual browsing and source depot.</p>
-
 
 <p>You might be missing four $ files the 'checkclr.c', 'nochkclr.c' and 2 printer files. You might want to hook up your professors printer on UNIX/LINUX per Donald Knuth. These files are only in the RTM Gold Visual Studio master. There should be no copying from the RTM files only copy to 'VSBuilt' from the NT Directory or revsion. and maybe make a Vc7b directory. If you have betas of Visual Studio 2002 make a beta drop, just be careful not to make incomaptable versions.</p>
 
