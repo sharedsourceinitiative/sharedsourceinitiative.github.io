@@ -102,7 +102,34 @@ The 'lib' files are in the 'NT' public sdk and ddk directories.</p>
 <p>Once you set a razzle window you can open up 'alias' and see a list of your projects and codebases and start building projects. You might was to build the ddk and sdk first.</p>
 <p>The BAK series of projects is for personal NT projects the public->internel is a skelecton on the source tree made for Freebsd 4.0, SCO sources and Longhorn or Vista Samples.</p>
 <pre>set sdxroot=D:\NT</pre>
-<p>The why to start building projects in change to the SDKTOOLS->DEBUGGERS->ENLISTMENTS and run envss.cmd you can edit thes file to fit your projects needs.</p>
+<p>The why to start building projects in change to the SDKTOOLS->DEBUGGERS->ENLISTMENTS and run envss.cmd you can edit thes file to fit your projects needs. Your Project Directory should be you Visual Studio Root</p>
+<p>Here is a Visual Studio starter project:</p>
+<pre>
+/ figC_01.c
+// Initializing specific array elements with designated initializers. 
+
+int main(void) {
+   int values[5] = {
+      [0] = 123, // initialize element 0
+      [4] = 456 // initialize element 4
+   }; // semicolon is required
+
+   // output array contents
+   printf("values: ");
+
+   for (size_t i = 0; i < 5; ++i) {
+      printf("%d  ", values[i]);
+   } 
+
+   puts("");
+} 
+
+/*************************************************************************
+ * (C) Copyright 1992-2021 by Deitel & Associates, Inc. and               *
+ * Pearson Education, Inc. All Rights Reserved.                           *
+ *                                                                        *
+*************************************************************************/
+</pre>
 <pre>You can try to run sdx.cmd</pre>
 <pre>Rename 'projects.map' in the tools directory to 'sd.map' and place in the root of the NT directory.</pre>
 <pre>enlist projects ex: sdx enlist NT main com -c</pre>
